@@ -21,8 +21,8 @@ for (let i = 0; i < lists.length; i++) {
   });
 }
 
+// filter boxbutton add class .chose
 const filterBoxs = document.querySelectorAll(".filter__bottom__item");
-
 for (let i = 0; i < filterBoxs.length; i++) {
   let filterBox = filterBoxs[i];
   filterBox.addEventListener("click", (e) => {
@@ -30,33 +30,8 @@ for (let i = 0; i < filterBoxs.length; i++) {
   });
 }
 
-function addClassCheck(li) {
-  if (li.className === "check") {
-    li.classList.remove("check");
-    return;
-  } else {
-    li.classList.add("check");
-    return;
-  }
-}
-
-function addClassChose(div) {
-  if (div.className === "filter__bottom__item") {
-    div.classList.add("chose");
-    return;
-  } else if (div.className === "filter__bottom__item chose") {
-    div.classList.remove("chose");
-    return;
-  }
-}
-
-function addClassFiltered(div) {
-  if (div.className === "filter__top__direction-right__item -filtered") {
-    div.classList.add("-active");
-    return;
-  } else if (
-    div.className === "filter__top__direction-right__item -filtered -active"
-  ) {
-    div.classList.remove("-active");
-  }
-}
+// filter sort add class .-active
+const filteredisActive = document.querySelector(".-filtered");
+filteredisActive.addEventListener("click", (e) => {
+  e.target.classList.toggle("-active");
+});
