@@ -21,6 +21,15 @@ for (let i = 0; i < lists.length; i++) {
   });
 }
 
+const filterBoxs = document.querySelectorAll(".filter__bottom__item");
+
+for (let i = 0; i < filterBoxs.length; i++) {
+  let filterBox = filterBoxs[i];
+  filterBox.addEventListener("click", (e) => {
+    e.target.classList.toggle("chose");
+  });
+}
+
 function addClassCheck(li) {
   if (li.className === "check") {
     li.classList.remove("check");
