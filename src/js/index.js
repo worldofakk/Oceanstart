@@ -14,21 +14,19 @@ let swiper = new Swiper(".swiper-container", {
 // filter dropdown add class .check
 
 const lists = document.querySelectorAll("ul.menu__drop li");
-for (let i = 0; i < lists.length; i++) {
-  let list = lists[i];
-  list.addEventListener("click", (e) => {
+lists.forEach(function (i) {
+  i.addEventListener("click", (e) => {
     e.target.classList.toggle("check");
   });
-}
+});
 
 // filter boxbutton add class .chose
 const filterBoxs = document.querySelectorAll(".filter__bottom__item");
-for (let i = 0; i < filterBoxs.length; i++) {
-  let filterBox = filterBoxs[i];
-  filterBox.addEventListener("click", (e) => {
+filterBoxs.forEach(function (i) {
+  i.addEventListener("click", (e) => {
     e.target.classList.toggle("chose");
   });
-}
+});
 
 // filter sort add class .-active
 const filteredisActive = document.querySelector(".-filtered");
