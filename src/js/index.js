@@ -11,7 +11,15 @@ let swiper = new Swiper(".swiper-container", {
   },
 });
 
-//
+// filter dropdown add class .check
+
+const lists = document.querySelectorAll("ul.menu__drop li");
+for (let i = 0; i < lists.length; i++) {
+  let list = lists[i];
+  list.addEventListener("click", (e) => {
+    e.target.classList.toggle("check");
+  });
+}
 
 function addClassCheck(li) {
   if (li.className === "check") {
