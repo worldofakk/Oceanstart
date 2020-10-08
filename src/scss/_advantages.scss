@@ -1,0 +1,26 @@
+.advantages {
+  padding-top: 66px;
+  padding-bottom: 161px;
+  background-color: #fff;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 90px;
+    margin-right: 104px;
+    &__item {
+      border-left: 2px solid rgba(50, 50, 50, 0.08);
+      padding-left: 25px;
+      h4 {
+        @include font(Roboto, normal, normal, 20px, #131313);
+        line-height: 120.3%;
+        letter-spacing: 0.105em;
+        text-transform: uppercase;
+        margin-bottom: 19px;
+      }
+      p {
+        @include font(Roboto, normal, normal, 16px, #868686);
+        line-height: 20px;
+      }
+    }
+  }
+}

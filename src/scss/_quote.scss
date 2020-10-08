@@ -1,0 +1,78 @@
+.quote {
+  margin-top: 141px;
+  background: #fff;
+  &__direction {
+    display: flex;
+    justify-content: space-between;
+    &__left {
+      margin-top: 146px;
+      margin-bottom: 157px;
+      margin-left: 40px;
+      &__text {
+        position: relative;
+        margin-bottom: 236px;
+        p {
+          @include font(Roboto, normal, normal, 16px, #494949);
+          line-height: 140%;
+          letter-spacing: 0.035em;
+        }
+        &:after {
+          position: absolute;
+          content: "";
+          width: 94px;
+          height: 108px;
+          top: -92px;
+          left: -45px;
+          background: url(/src/img/«.png) no-repeat center;
+        }
+        &:before {
+          position: absolute;
+          content: "";
+          width: 94px;
+          height: 108px;
+          right: -43px;
+          bottom: -79px;
+          background: url(/src/img/right.png) no-repeat center;
+        }
+      }
+      button {
+        padding: 23px 37px;
+        @include font(Roboto, normal, normal, 20px, #fff);
+        line-height: 120.3%;
+        letter-spacing: 0.105em;
+        text-transform: uppercase;
+        background: #292929;
+        border: none;
+        cursor: pointer;
+      }
+    }
+    &__right {
+      &__photo {
+        img {
+          position: relative;
+          top: -100px;
+          left: 150px;
+          width: 715px;
+          display: block;
+        }
+      }
+      &__caption {
+        position: relative;
+        top: -50px;
+        text-align: right;
+        p {
+          @include font(Roboto, normal, normal, 20px, #000000);
+          line-height: 25px;
+          letter-spacing: 0.07em;
+          text-transform: uppercase;
+          span {
+            @include font(Roboto, normal, normal, 16px, #a0a0a0);
+            line-height: 118.49%;
+            letter-spacing: 0.035em;
+            text-transform: none;
+          }
+        }
+      }
+    }
+  }
+}

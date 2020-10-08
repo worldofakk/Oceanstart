@@ -1,0 +1,34 @@
+@import "font";
+@import "default";
+@import "variables";
+@import "header";
+@import "filter";
+@import "gallery";
+@import "quote";
+@import "stages";
+@import "reviews";
+@import "order";
+@import "advantages";
+@import "footer-list";
+@import "copyright";
+
+body {
+  background: #f2f2f2;
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.bg-white {
+  background: #fff;
+  backdrop-filter: blur(60px);
+}
+.-promo {
+  color: #ff3d00 !important;
+  &:after {
+    border-color: #ff3d00 !important;
+  }
+}

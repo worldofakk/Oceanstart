@@ -1,0 +1,82 @@
+.stages {
+  margin-bottom: 94px;
+  &__title {
+    margin-bottom: 77px;
+    h3 {
+      @include font(Cormorant Garamond, normal, 300, 72px, #000000);
+      line-height: 117.3%;
+      letter-spacing: -0.025em;
+    }
+  }
+  &__step {
+    display: flex;
+    justify-content: space-between;
+    &__item {
+      margin-right: 5px;
+      background: #fff;
+      z-index: 1;
+      position: relative;
+      color: #000000;
+      padding: 46px 140px 477px 140px;
+      text-align: center;
+      overflow: hidden;
+      cursor: pointer;
+      &__text {
+        h4 {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 120.3%;
+          letter-spacing: 0.105em;
+          text-transform: uppercase;
+          margin-bottom: 36px;
+        }
+        p {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 140%;
+          letter-spacing: 0.035em;
+        }
+      }
+      &__number {
+        position: absolute;
+        font-family: Cormorant Garamond;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 900px;
+        line-height: 0;
+        letter-spacing: 0.035em;
+        color: rgba(255, 61, 0, 0.2);
+        &.-one {
+          bottom: 264px;
+          left: -46px;
+        }
+        &.-two {
+          bottom: 254px;
+          left: -78px;
+        }
+        &.-three {
+          bottom: 285px;
+          left: 25px;
+          font-size: 600px;
+        }
+        &.-four {
+          bottom: 262px;
+          left: -17px;
+          font-size: 600px;
+        }
+      }
+      &:hover {
+        background: url(/src/img/AnconaLux2.png), rgba(230, 227, 227, 0.383);
+        opacity: 0.9;
+        color: white !important;
+      }
+      &:hover .stages__step__item__number {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+}

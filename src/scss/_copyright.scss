@@ -1,0 +1,22 @@
+.footer__copyright {
+  background-color: #fff;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__text {
+    display: flex;
+    @include font(Roboto, normal, normal, 16px, #a0a0a0);
+    line-height: 42px;
+    letter-spacing: 0.035em;
+    p:first-child {
+      margin-right: 118px;
+    }
+  }
+  &__card-img {
+    img:first-child {
+      margin-right: 21px;
+    }
+  }
+}

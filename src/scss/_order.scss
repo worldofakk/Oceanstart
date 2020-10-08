@@ -1,0 +1,100 @@
+.order {
+  background-color: #f2f2f2;
+  &__direction {
+    display: flex;
+    &__left {
+      h4 {
+        @include font(Cormorant Garamond, normal, 300, 72px, #141414);
+        line-height: 117.3%;
+        letter-spacing: -0.025em;
+        margin-bottom: 101px;
+        margin-top: 108px;
+      }
+      p {
+        @include font(Roboto, normal, normal, 16px, #666666);
+        line-height: 140%;
+        letter-spacing: 0.035em;
+        margin-bottom: 58px;
+      }
+      &__dropdown {
+        @include font(Roboto, normal, normal, 20px, #000000);
+        line-height: 120.3%;
+        letter-spacing: 0.105em;
+        text-transform: uppercase;
+        position: relative;
+        cursor: pointer;
+        ul {
+          display: none;
+          position: absolute;
+          width: 120px;
+          text-align: center;
+          background-color: rgba(207, 203, 203, 0.39);
+          li {
+            margin: 15px;
+          }
+        }
+        &:hover ul {
+          display: block;
+        }
+        &:after {
+          position: absolute;
+          content: "";
+          width: 9px;
+          height: 9px;
+          bottom: 0;
+          top: -6px;
+          left: 135px;
+          margin: auto;
+          border-bottom: 2px solid #000000;
+          border-right: 2px solid #000000;
+          transform: rotate(45deg);
+          transition: 0.5s;
+        }
+        &:hover:after {
+          transform: rotate(225deg) translateX(-3px) translateY(-4px);
+        }
+      }
+    }
+    &__right {
+      &__photo {
+        img {
+          position: relative;
+          top: -100px;
+          left: 150px;
+          width: 715px;
+          display: block;
+          mix-blend-mode: darken;
+        }
+      }
+      &__caption {
+        display: flex;
+        position: relative;
+        top: -60px;
+        justify-content: flex-end;
+        &__signature {
+          margin-right: 105px;
+          position: relative;
+          top: -10px;
+          background: url(/src/img/signature.png) no-repeat center;
+          width: 129px;
+          height: 77px;
+          mix-blend-mode: darken;
+        }
+        &__photo {
+          h4 {
+            @include font(Roboto, normal, normal, 20px, #000000);
+            line-height: 120.3%;
+            letter-spacing: 0.105em;
+            text-transform: uppercase;
+            margin-bottom: 9px;
+          }
+          p {
+            @include font(Roboto, normal, normal, 16px, #a0a0a0);
+            line-height: 118.49%;
+            letter-spacing: 0.035em;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,178 @@
+.customer-reviews {
+  margin-bottom: 119px;
+  position: relative;
+  &__buttons {
+    position: relative;
+    .custom-next {
+      color: #fff;
+      right: 0px;
+      top: 0;
+      left: 1522px;
+      bottom: 0;
+      margin: auto;
+      background-color: #ff3d00;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      &::after {
+        font-size: 30px;
+      }
+    }
+    .custom-prev {
+      color: #fff;
+      right: 0px;
+      top: 0;
+      left: 1369px;
+      bottom: 0;
+      margin: auto;
+      background-color: #ff3d00;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      &::after {
+        font-size: 30px;
+      }
+    }
+    .swiper-button-disabled {
+      background: transparent;
+      color: #ff3d00;
+    }
+  }
+  &__title {
+    margin-bottom: 51px;
+    h4 {
+      @include font(Cormorant Garamond, normal, 300, 72px, #141414);
+      line-height: 113.3%;
+      letter-spacing: -0.025em;
+    }
+  }
+  &__slide {
+    padding: 26px 35px 26px 26px;
+    border: 1px solid #cfcfcf;
+    width: 773px;
+    height: 290px;
+    margin-bottom: 54px;
+    &__item {
+      display: flex;
+      &__left {
+        margin-right: 27px;
+        position: relative;
+        z-index: 4;
+        img {
+          width: 256px;
+          height: 239px;
+          object-fit: cover;
+        }
+        a {
+          position: absolute;
+          width: 39px;
+          height: 39px;
+          border: 1px solid #000000;
+          bottom: 12px;
+          right: 12px;
+          display: block;
+          z-index: 100;
+          &:after {
+            position: absolute;
+            content: "";
+            border-top: 1px solid black;
+            width: 21px;
+            height: 1px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            transform: rotate(-45deg);
+          }
+          &:before {
+            position: absolute;
+            content: "";
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            width: 4px;
+            height: 4px;
+            top: -11px;
+            left: 9px;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+          }
+        }
+      }
+      &__right {
+        &__title {
+          display: flex;
+          align-items: center;
+          margin-bottom: 28px;
+          .vk {
+            background: url(/src/img/vk.png) no-repeat center;
+            display: block;
+            cursor: pointer;
+            width: 27px;
+            height: 27px;
+            margin-right: 17px;
+          }
+          .instagram {
+            background: url(/src/img/Instagram.png) no-repeat center;
+            display: block;
+            cursor: pointer;
+            width: 27px;
+            height: 27px;
+            margin-right: 17px;
+          }
+          p {
+            @include font(Roboto, normal, 600, 20px, #292929);
+            line-height: 25px;
+            letter-spacing: 0.135em;
+            text-transform: uppercase;
+          }
+        }
+        &__body {
+          margin-bottom: 35px;
+          p {
+            @include font(Roboto, normal, normal, 16px, #666666);
+            line-height: 140%;
+            letter-spacing: 0.035em;
+          }
+        }
+        &__footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          &__data {
+            @include font(Roboto, normal, normal, 14px, #171717);
+            opacity: 0.5;
+            line-height: 118.49%;
+            letter-spacing: 0.035em;
+          }
+          &__link {
+            position: relative;
+            margin-right: 26px;
+            cursor: pointer;
+            a {
+              padding-bottom: 3px;
+              @include font(Roboto, normal, normal, 18px, #ff3d00);
+              border-bottom: 1px solid rgba(255, 61, 0, 0.21);
+              line-height: 118.49%;
+              letter-spacing: 0.105em;
+              text-transform: uppercase;
+              &:after {
+                position: absolute;
+                content: "";
+                width: 26px;
+                height: 10px;
+                top: 0;
+                bottom: 0;
+                right: -31px;
+                margin: auto;
+                background: url(/src/img/arrow-right-comment.png) no-repeat
+                  center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
